@@ -1,12 +1,11 @@
 // ---IDEAS----------
-// WELL, NO - BG color
-// click on 2 === words => they disappear
+// buttons: - BG color -  - generate new-
+// click on 2 === words => they disappear ?
 // add more sticky-mans
-// fill form on 1 click
 
-//  *****************Nothing works*******************
+//  ***********************************
 
-//---change BG color
+//-1--change BG color ---- VVVVVVVVVVVVVVVVVVVVVVV
 const pmBtn = document.getElementById("pm");
 // console.log(pmBtn);
 pmBtn.addEventListener("mouseover", changeBackground);
@@ -21,9 +20,9 @@ function changeBackground() {
   }
 }
 
-// //------change button color
+//--2----change button color -----VVVVVVVVVVVVVVVV
 const wnBtn = document.getElementById("wn");
-console.log(pmBtn);
+// console.log(pmBtn);
 wnBtn.addEventListener("mouseover", function () {
   wnBtn.style.background = "purple";
 });
@@ -31,37 +30,59 @@ wnBtn.addEventListener("mouseleave", function () {
   wnBtn.style.background = "#a8dbd2";
 });
 
-// // ---------- BG with gradient
+//  ------ to add more sticky mans----------------VVVVVVVVVVVVVVVVV
+const stickiManImg = document.getElementById("walkingPic");
+stickiManImg.addEventListener("click", function () {
+  document.querySelector(".anim").innerHTML =
+    `<img id="walkingPic" src="img/8765.gif" alt="Walking Stickman" />` +
+    `<img id="walkingPic" src="img/8765.gif" alt="Walking Stickman" />` +
+    `<img id="walkingPic" src="img/8765.gif" alt="Walking Stickman" />` +
+    ` <img id="walkingPic" src="img/8765.gif" alt="Walking Stickman" />` +
+    `<img id="walkingPic" src="img/8765.gif" alt="Walking Stickman" />` +
+    `<img id="walkingPic" src="img/8765.gif" alt="Walking Stickman" />` +
+    `<img id="walkingPic" src="img/8765.gif" alt="Walking Stickman" />` +
+    `<img id="walkingPic" src="img/8765.gif" alt="Walking Stickman" />` +
+    `<img id="walkingPic" src="img/8765.gif" alt="Walking Stickman" />` +
+    ` <img id="walkingPic" src="img/8765.gif" alt="Walking Stickman" />` +
+    `<img id="walkingPic" src="img/8765.gif" alt="Walking Stickman" />` +
+    `<img id="walkingPic" src="img/8765.gif" alt="Walking Stickman" />`;
+});
+
+// // // ---------- BG with gradient
+// const gdBtn = document.getElementById("gd");
+// // console.log(gdBtn);
 // function gradualColors() {
 //   const colorArray = [
+//     "linear-gradient(0deg, red, blue)",
+//     "linear-gradient(90deg, red, blue)",
+//     "linear-gradient(180deg, red, blue)",
+//     "linear-gradient(270deg, red, blue)",
+//   ];
+//   document.querySelector(".nav_brown").innerHTML.style.background =
+//     colorArray[currentColour]; // brown #271d0d
+// }
+// if (currentColour === colorArray.length - 1) {
+//   currentColour = 0;
+// } else {
+//   currentColour++;
+// }
+
 //     "linear-gradient(150deg, red, blue)",
 //     "linear-gradient(45deg, yellow, gray)",
 //     "linear-gradient(90deg, green, black)",
 //     "linear-gradient(120deg, orange, pink)",
-//   ];
 
-//   if (currentColour === colorArray.length - 1) {
-//     currentColour = 0;
-//   } else {
-//     currentColour++;
-//     }
+//      ---------grad colors ref-------------------
+//      "linear-gradient(150deg, red, blue)",
+//     "linear-gradient(45deg, yellow, gray)",
+//     "linear-gradient(90deg, green, black)",
+//     "linear-gradient(120deg, orange, pink)",
 
-//     document.body.style.background = colorArray[currentColour];
-
-//-------------- fill form
-let submitButton = document.getElementById("submitBtn");
-submitButton.addEventListener("click", function () {
-  document.getElementById("input1").placeholder = "Vavava";
-  document.getElementById("input2").placeholder = "Kokoko";
-  document.getElementById("email").placeholder = "Vava@koko.com";
-  document.getElementById("num").placeholder = "123456789";
-});
-
-// -----------make every second word - blue  mouse over Tree pic-------
-// const para = document.querySelector("p.r2c2").innerHTML;
-
-//  ------ to add more sticky mans----------------
-// const onePic = document.getElementById("walkingPic");
-// onePic.addEventListener("click", function () {
-//   document.getElementsByClassName(".anim") = onePic + onePic;
+// gdBtn.addEventListener("click", function () {
+//   document.querySelector(".nav_brown").innerHTML = gradualColors();
 // });
+// wnBtn.addEventListener("mouseleave", function () {
+//   wnBtn.style.background = "#a8dbd2";
+// });
+
+//
