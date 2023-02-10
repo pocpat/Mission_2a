@@ -1,0 +1,396 @@
+@import url("https://fonts.googleapis.com/css2?family=Mali:wght@200&display=swap");
+
+/* h1 font-family: 'Mali',
+cursive; */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;900&display=swap");
+
+/* <p> font-family: 'Montserrat',
+sans-serif; */
+
+body {
+  background-color: #f2f0e4;
+  margin: 5% 0%;
+  min-width: 600px;
+  max-width: 1500px;
+}
+
+header {
+  display: block;
+  justify-content: center;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+  /* float: right; */
+  padding: 3% 3%;
+}
+
+.row_1 {
+  position: relative;
+  text-align: center;
+  left: 10%;
+}
+
+.row_2 {
+  max-width: 400px;
+}
+
+button.row_1,
+form > button {
+  position: relative;
+  left: 50%;
+  background-color: #ee4734;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+button.row_1:hover {
+  background-color: #ffffff;
+  color: #ee4734;
+  font-weight: bolder;
+}
+
+button.row_2 {
+  position: relative;
+
+  background-color: #3175b6;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  /* display: inline-block; */
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+button.row_2:hover {
+  background-color: #ffffff;
+  color: #3175b6;
+  font-weight: bolder;
+}
+
+.row_2 {
+  position: relative;
+  left: 10%;
+}
+
+h1.r1c2,
+button.r1c2 {
+  text-align: center;
+}
+
+/* .r1c1{
+    max-width: 50%;
+} */
+.r2c2 {
+  text-align: left;
+  max-width: 90%;
+  left: 50%;
+}
+
+.img {
+  width: 90%;
+  position: relative;
+  left: 5%;
+  padding: 9px 1px;
+}
+
+.border {
+  position: relative;
+  background: linear-gradient(0deg, #f2f0e4, #f2f0e4);
+}
+
+.border:before,
+.border:after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(
+    45deg,
+    #ee4734,
+    #a8dbd2,
+    #fbbb5a,
+    #82b3de,
+    #3175b6,
+    #ee4734,
+    #a8dbd2,
+    #fbbb5a,
+    #fbbb5a,
+    #82b3de
+  );
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.block:after {
+  filter: blur(50px);
+}
+
+.main_text {
+  margin: 0px 20px;
+}
+
+h1 {
+  font-family: "Mali", cursive;
+  /* color: beige; */
+}
+
+p,
+form > textarea {
+  font-family: "Montserrat", sans-serif;
+}
+
+.r1c2 > p {
+  color: #3175b6;
+  font-weight: 600;
+  font-variant: small-caps;
+}
+
+.nav_brown {
+  display: block;
+  height: 100px;
+  background-color: #271d0d;
+  margin-top: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0%;
+  padding: 4% 0%;
+}
+
+ul > p {
+  display: inline;
+}
+
+nav > ul {
+  display: flex;
+  justify-content: center;
+  margin: 0px 100px 50px 100px;
+  /* add animation */
+  animation: slide 3s linear;
+  animation-direction: backward;
+}
+
+@keyframes slide {
+  0% {
+    transform: translate(-100%, 0px);
+  }
+
+  100% {
+    transform: translate(0%, 0px);
+  }
+}
+
+.nav-link {
+  list-style: none;
+  /* background-color: #d8e4ef; */
+  margin: 2px 5px;
+  padding: 8px 15px;
+  border-radius: 6px;
+  text-align: center;
+}
+.nav-link:nth-child(1) {
+  background-color: #3175b6;
+}
+
+.nav-link:nth-child(2) {
+  background-color: #82b3de;
+}
+
+.nav-link:nth-child(3) {
+  background-color: #fbbb5a;
+}
+
+.nav-link:nth-child(4) {
+  background-color: #a8dbd2;
+}
+
+.nav-link:nth-child(5) {
+  background-color: #ee4734;
+}
+
+.nav-link:hover {
+  background-color: #f2f0e4;
+  color: rgb(0, 0, 0);
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: row space-between;
+  grid-template-columns: 100px;
+  grid-gap: 0px;
+}
+
+.container div:nth-child(1) {
+  background-color: #ee4734;
+  height: 10px;
+  width: 25%;
+}
+
+.container div:nth-child(2) {
+  background-color: #a8dbd2;
+  height: 10px;
+  width: 25%;
+}
+
+.container div:nth-child(3) {
+  background-color: #fbbb5a;
+  height: 10px;
+  width: 25%;
+}
+
+.container div:nth-child(4) {
+  background-color: #82b3de;
+  height: 10px;
+  width: 25%;
+}
+
+.container div:nth-child(5) {
+  background-color: #3175b6;
+  height: 10px;
+  width: 25%;
+}
+
+.fa-share {
+  color: #fbbb5a;
+}
+.page2 {
+  background-color: #a8dbd2;
+  width: 60%;
+  height: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  border: none;
+  border-radius: 30px;
+  text-align: center;
+  padding-top: 1px;
+}
+
+form > input,
+form > textarea {
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 3px;
+}
+
+form > button {
+  left: 0%;
+}
+
+form > button:hover {
+  background-color: #ffffff;
+  color: #ee4734;
+}
+
+.hands {
+  width: 25%;
+  margin: 0%;
+  padding: 0%;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 1% 5%;
+  padding-bottom: 0%;
+}
+
+.anim {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0%;
+  padding-bottom: 0%;
+  height: 60px;
+  animation: walking 15s linear infinite;
+  animation-direction: backward;
+  animation-fill-mode: none;
+  animation-delay: 0s;
+}
+
+.anim img {
+  height: 100%;
+  width: auto;
+}
+
+@keyframes walking {
+  0% {
+    transform: translate(0, 0px);
+  }
+
+  100% {
+    transform: translate(-100%, 0px);
+  }
+}
+
+/*  stickiman 2 */
+
+/* color pallete
+BG #f2f0e4
+red   #ee4734
+light blue #a8dbd2
+bege #fbbb5a
+blue #82b3de
+dark blue #3175b6 */
+/* Luisa`s button design */
+button Luisa {
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 16px 0px;
+  color: #194b63;
+  background-color: #ffffff;
+  font-family: Helvetica, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 0.02em;
+  font-size: 1rem;
+  padding: 1.2em 2.004em;
+  border-width: 0px;
+  line-height: normal;
+}
