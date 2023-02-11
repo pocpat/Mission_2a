@@ -5,18 +5,18 @@
 
 //  ***********************************
 
-//-1--change BG color ---- VVVVVVVVVVVVVVVVVVVVVVV
+//-1--change BG color ---- XXXXXXXXXXXXXXXXXX
 const pmBtn = document.getElementById("pm");
 // console.log(pmBtn);
-pmBtn.addEventListener("mouseover", changeBackground);
-pmBtn.addEventListener("mouseleave", changeBackground);
+pmBtn.addEventListener("mouseover", changeBackground());
+pmBtn.addEventListener("mouseleave", changeBackground());
 
 function changeBackground() {
   // console.log("in changefn");
-  if (document.body.style.background == "orange") {
-    document.body.style.background = "rgb(242, 240, 228)";
+  if (document.body.style.background == "#F2F0E4") {
+    document.body.style.background = "#fbbb5a";
   } else {
-    document.body.style.background = "orange";
+    document.body.style.background = "#F2F0E4";
   }
 }
 
@@ -31,21 +31,24 @@ wnBtn.addEventListener("mouseleave", function () {
 });
 
 //  ------ to add more sticky mans----------------VVVVVVVVVVVVVVVVV
-const stickiManImg = document.getElementById("walkingPic");
-stickiManImg.addEventListener("click", function () {
-  document.querySelector(".anim").innerHTML =
-    `<img id="walkingPic" src="img/8765.gif" alt="Walking Stickman" />` +
-    `<img id="walkingPic" src="img/8765.gif" alt="Walking Stickman" />` +
-    `<img id="walkingPic" src="img/8765.gif" alt="Walking Stickman" />` +
-    ` <img id="walkingPic" src="img/8765.gif" alt="Walking Stickman" />` +
-    `<img id="walkingPic" src="img/8765.gif" alt="Walking Stickman" />` +
-    `<img id="walkingPic" src="img/8765.gif" alt="Walking Stickman" />` +
-    `<img id="walkingPic" src="img/8765.gif" alt="Walking Stickman" />` +
-    `<img id="walkingPic" src="img/8765.gif" alt="Walking Stickman" />` +
-    `<img id="walkingPic" src="img/8765.gif" alt="Walking Stickman" />` +
-    ` <img id="walkingPic" src="img/8765.gif" alt="Walking Stickman" />` +
-    `<img id="walkingPic" src="img/8765.gif" alt="Walking Stickman" />` +
-    `<img id="walkingPic" src="img/8765.gif" alt="Walking Stickman" />`;
+let gdBtn = document.getElementById("gd");
+let stickiManImg = document.getElementById("walkingPic");
+
+let i = 0;
+gdBtn.addEventListener("click", function () {
+  i++;
+  let imgNode = document.createElement("img"); // is a node
+  imgNode.id = "walkingPic" + " " + i;
+  imgNode.src = "img/8765.gif";
+  imgNode.alt = "Walking Stickman";
+
+  document.querySelector(".anim").appendChild(imgNode);
+});
+
+let niBtn = document.getElementById("ni");
+niBtn.addEventListener("click", function () {
+  let anim = document.querySelector(".anim");
+  anim.removeChild(anim.firstElementChild);
 });
 
 // // // ---------- BG with gradient
@@ -85,4 +88,15 @@ stickiManImg.addEventListener("click", function () {
 //   wnBtn.style.background = "#a8dbd2";
 // });
 
+// ------- create new buttons -----
+//  === create an array of colors=== //
+// const colors = ["#3175b6", "#82b3de", "#fbbb5a", "#a8dbd2", "#ee4734"];
+// const namesBtn = ["PRESS ME", "WELL, NO", "G`DAY!", "NAILED IT", "KABOOM"];
+// //  == loop over the colors === //
+// for (let i = 0; i < namesBtn.length; i++) {
+//   const button = document.createElement("button");
+//   button.style.backgroundColor = colors[i];
+//   button.innerText = namesBtn[i];
+//   document.getElementById("newBtns").appendChild(button);
+// }
 //
