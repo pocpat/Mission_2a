@@ -7,18 +7,16 @@
 
 //-1--change BG color ---- XXXXXXXXXXXXXXXXXX
 const pmBtn = document.getElementById("pm");
-// console.log(pmBtn);
-pmBtn.addEventListener("mouseover", changeBackground());
-pmBtn.addEventListener("mouseleave", changeBackground());
+console.log(pmBtn);
+// pmBtn.addEventListener("mouseover", changeBackground());
 
-function changeBackground() {
-  // console.log("in changefn");
-  if (document.body.style.background == "#F2F0E4") {
-    document.body.style.background = "#fbbb5a";
-  } else {
-    document.body.style.background = "#F2F0E4";
-  }
-}
+pmBtn.addEventListener("mouseover", function () {
+  document.body.style.background = "#fbbb5a";
+});
+
+pmBtn.addEventListener("mouseleave", function () {
+  document.body.style.background = "#f2f0e4";
+});
 
 //--2----change button color -----VVVVVVVVVVVVVVVV
 const wnBtn = document.getElementById("wn");
