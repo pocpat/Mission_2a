@@ -11,8 +11,6 @@ sans-serif; */
 body {
   background-color: #f2f0e4;
   margin: 5% 0%;
-  min-width: 600px;
-  max-width: 1500px;
 }
 
 header {
@@ -31,7 +29,6 @@ header {
 
 .column {
   flex: 50%;
-  /* float: right; */
   padding: 3% 3%;
 }
 
@@ -60,6 +57,7 @@ form > button {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 button.row_1:hover {
@@ -78,7 +76,6 @@ button.row_2 {
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
-  /* display: inline-block; */
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
@@ -100,9 +97,6 @@ button.r1c2 {
   text-align: center;
 }
 
-/* .r1c1{
-    max-width: 50%;
-} */
 .r2c2 {
   text-align: left;
   max-width: 90%;
@@ -171,7 +165,6 @@ button.r1c2 {
 
 h1 {
   font-family: "Mali", cursive;
-  /* color: beige; */
 }
 
 p,
@@ -223,7 +216,6 @@ nav > ul {
 
 .nav-link {
   list-style: none;
-  /* background-color: #d8e4ef; */
   margin: 2px 5px;
   padding: 8px 15px;
   border-radius: 6px;
@@ -367,30 +359,34 @@ footer {
   }
 }
 
-/*  stickiman 2 */
+/* -------responcive -------*/
 
-/* color pallete
-BG #f2f0e4
-red   #ee4734
-light blue #a8dbd2
-bege #fbbb5a
-blue #82b3de
-dark blue #3175b6 */
-/* Luisa`s button design */
-button Luisa {
-  text-align: center;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  border-radius: 16px 0px;
-  color: #194b63;
-  background-color: #ffffff;
-  font-family: Helvetica, sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  letter-spacing: 0.02em;
-  font-size: 1rem;
-  padding: 1.2em 2.004em;
-  border-width: 0px;
-  line-height: normal;
+@media only screen and (min-width: 992px) {
+  body {
+    min-width: 992px;
+    max-width: 1200px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  body {
+    min-width: 500px;
+    max-width: 600px;
+  }
+  h1 {
+    font-size: larger;
+    text-align: center;
+  }
+  p {
+    font-size: small;
+  }
+  .row_1 {
+    position: relative;
+    text-align: start;
+    padding-right: 30px;
+    justify-content: center;
+  }
+  #paraBtn {
+    justify-content: flex-start;
+    left: 7%;
+  }
 }
