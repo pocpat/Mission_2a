@@ -40,3 +40,17 @@ niBtn.addEventListener("click", function () {
   let anim = document.querySelector(".anim");
   anim.removeChild(anim.firstElementChild);
 });
+
+
+// ------------wordsSeparator();---------------VVVVVVVVVVVV
+
+let kbBtn = document.getElementById("kb");
+let strPara = document.getElementById("separate").innerHTML;
+
+kbBtn.addEventListener("click", function () {
+  let separated = (document.getElementById("separate").innerHTML =
+    strPara.split(""));
+});
+kbBtn.addEventListener("dblclick", function () {
+  let combined = (document.getElementById("separate").innerHTML = strPara);
+});
